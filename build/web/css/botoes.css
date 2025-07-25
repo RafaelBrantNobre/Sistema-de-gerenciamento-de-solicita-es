@@ -1,0 +1,19 @@
+/* Estilo exclusivo para botões */
+
+.botao {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor da fonte */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 5px; /* Espaçamento externo */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Muda cursor ao passar */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block;
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Animação suave */
+}
+
+.botao:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+}

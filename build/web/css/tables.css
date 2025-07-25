@@ -1,0 +1,438 @@
+/* ========================================
+   ESTILOS PARA TABELAS
+   ======================================== */
+
+/* ===== TABELA BASE ===== */
+.table {
+    width: 100%;
+    margin-bottom: var(--spacing-6);
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: var(--spacing-4);
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: var(--gray-50);
+    font-weight: 600;
+    color: var(--gray-900);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table tbody tr {
+    transition: var(--transition);
+}
+
+.table tbody tr:hover {
+    background-color: var(--gray-50);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== TABELA COM BORDAS ===== */
+.table-bordered {
+    border: 1px solid var(--gray-200);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--gray-200);
+}
+
+/* ===== TABELA STRIPED ===== */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: var(--gray-50);
+}
+
+.table-striped tbody tr:nth-child(odd):hover {
+    background-color: var(--gray-100);
+}
+
+/* ===== TABELA COMPACTA ===== */
+.table-sm th,
+.table-sm td {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-sm);
+}
+
+/* ===== TABELA RESPONSIVA ===== */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.table-responsive .table {
+    margin-bottom: 0;
+    box-shadow: none;
+}
+
+/* ===== TABELA COM AÇÕES ===== */
+.table-actions {
+    width: 120px;
+    text-align: center;
+}
+
+.table-actions .btn {
+    margin: 0 var(--spacing-1);
+}
+
+/* ===== TABELA COM STATUS ===== */
+.table-status {
+    width: 100px;
+    text-align: center;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-active {
+    background-color: var(--success-color);
+    color: var(--white);
+}
+
+.status-pending {
+    background-color: var(--warning-color);
+    color: var(--white);
+}
+
+.status-inactive {
+    background-color: var(--danger-color);
+    color: var(--white);
+}
+
+.status-processing {
+    background-color: var(--info-color);
+    color: var(--white);
+}
+
+/* ===== TABELA COM AVATAR ===== */
+.table-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.table-user {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.table-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-user-name {
+    font-weight: 500;
+    color: var(--gray-900);
+}
+
+.table-user-email {
+    font-size: var(--font-size-xs);
+    color: var(--gray-600);
+}
+
+/* ===== TABELA COM PROGRESSO ===== */
+.table-progress {
+    width: 150px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: var(--font-size-xs);
+    color: var(--gray-600);
+    margin-top: var(--spacing-1);
+}
+
+/* ===== TABELA COM CHECKBOX ===== */
+.table-checkbox {
+    width: 40px;
+    text-align: center;
+}
+
+.table-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ===== TABELA COM EXPANSÃO ===== */
+.table-expandable tbody tr {
+    cursor: pointer;
+}
+
+.table-expandable .expand-icon {
+    transition: transform 0.2s ease;
+}
+
+.table-expandable tr.expanded .expand-icon {
+    transform: rotate(90deg);
+}
+
+.table-expandable .expand-content {
+    display: none;
+    background-color: var(--gray-50);
+    padding: var(--spacing-4);
+}
+
+.table-expandable tr.expanded .expand-content {
+    display: block;
+}
+
+/* ===== TABELA COM FILTROS ===== */
+.table-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
+    padding: var(--spacing-4);
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.table-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.table-filter label {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--gray-700);
+    margin: 0;
+}
+
+.table-filter select,
+.table-filter input {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+}
+
+/* ===== TABELA COM PAGINAÇÃO ===== */
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-4);
+    padding: var(--spacing-4);
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.table-info {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.table-pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.table-pagination-controls .btn {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-sm);
+}
+
+/* ===== TABELA VAZIA ===== */
+.table-empty {
+    text-align: center;
+    padding: var(--spacing-12);
+    color: var(--gray-500);
+}
+
+.table-empty-icon {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-4);
+    opacity: 0.5;
+}
+
+.table-empty-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-2);
+    color: var(--gray-700);
+}
+
+.table-empty-text {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-4);
+}
+
+/* ===== TABELA COM LOADING ===== */
+.table-loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.table-loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.table-loading::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--gray-200);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 11;
+}
+
+/* ===== RESPONSIVE TABLES ===== */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: var(--font-size-sm);
+    }
+    
+    .table th,
+    .table td {
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+    
+    .table-actions {
+        width: auto;
+    }
+    
+    .table-actions .btn {
+        padding: var(--spacing-1) var(--spacing-2);
+        font-size: var(--font-size-xs);
+    }
+    
+    .table-filters {
+        flex-direction: column;
+    }
+    
+    .table-pagination {
+        flex-direction: column;
+        gap: var(--spacing-3);
+        text-align: center;
+    }
+    
+    .table-user {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-1);
+    }
+}
+
+/* ===== TABELA PARA DADOS ESPECÍFICOS DO SISTEMA ===== */
+/* Tabela de Solicitações */
+.table-solicitacoes .status-solicitacao {
+    width: 120px;
+    text-align: center;
+}
+
+.status-aberta {
+    background-color: var(--info-color);
+    color: var(--white);
+}
+
+.status-em-tramitacao {
+    background-color: var(--warning-color);
+    color: var(--white);
+}
+
+.status-concluida {
+    background-color: var(--success-color);
+    color: var(--white);
+}
+
+.status-cancelada {
+    background-color: var(--danger-color);
+    color: var(--white);
+}
+
+/* Tabela de Tramitações */
+.table-tramitacoes .data-tramitacao {
+    font-size: var(--font-size-xs);
+    color: var(--gray-600);
+}
+
+.table-tramitacoes .parecer {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Tabela de Alunos */
+.table-alunos .situacao-aluno {
+    width: 100px;
+    text-align: center;
+}
+
+.situacao-ativo {
+    background-color: var(--success-color);
+    color: var(--white);
+}
+
+.situacao-inativo {
+    background-color: var(--danger-color);
+    color: var(--white);
+}
+
+.situacao-pendente {
+    background-color: var(--warning-color);
+    color: var(--white);
+} 
